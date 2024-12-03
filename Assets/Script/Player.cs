@@ -30,6 +30,10 @@ public class Player : MonoBehaviour
 
         anim.SetFloat("Horizontal", mov.x);
         anim.SetFloat("Speed", mov.sqrMagnitude);
+        if (mov.x != 0) // Si el jugador se mueve en el eje horizontal
+        {
+            spritePerso.flipX = mov.x < 0; // Si se mueve a la izquierda, se voltea (flipX)
+        }
     }
 
 
