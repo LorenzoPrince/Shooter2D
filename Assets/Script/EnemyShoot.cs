@@ -11,7 +11,7 @@ public class EnemyShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Shoot());
     }
 
     // Update is called once per frame
@@ -22,8 +22,9 @@ public class EnemyShoot : MonoBehaviour
             yield return new WaitForSeconds(intervalTime);//intervalo de tiempo
 
             Vector2 direction = (player.transform.position - transform.position).normalized;  // vector para saber donde esta el jugador
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation); //instancia la bala
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity =  direction * bulletSpeed;
         
         }
     }

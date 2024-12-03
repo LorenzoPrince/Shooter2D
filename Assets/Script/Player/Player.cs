@@ -23,10 +23,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move();
+    }
+
+    private void Move()
+    {
         mov.x = Input.GetAxisRaw("Horizontal") * speed;
         mov.y = Input.GetAxisRaw("Vertical") * speed;
         rb.velocity = new Vector2(mov.x, mov.y); // el rb.velocity se encarga de mantener el movimiento independiente a los frame
-        anim.SetFloat("Caminar", Mathf.Abs(rb.velocity.magnitude)); // nos devuelve un numero absoluto y revisa la velocidad
+
 
         anim.SetFloat("Horizontal", mov.x);
         anim.SetFloat("Speed", mov.sqrMagnitude);
@@ -35,7 +40,4 @@ public class Player : MonoBehaviour
             spritePerso.flipX = mov.x < 0; // Si se mueve a la izquierda, se voltea (flipX)
         }
     }
-
-
-
 }
