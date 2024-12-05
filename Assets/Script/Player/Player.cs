@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         mov.x = Input.GetAxisRaw("Horizontal") * speed;
         mov.y = Input.GetAxisRaw("Vertical") * speed;
         rb.velocity = new Vector2(mov.x, mov.y); // el rb.velocity se encarga de mantener el movimiento independiente a los frame
-
+        anim.SetFloat("Caminar", Mathf.Abs(rb.velocity.magnitude)); // nos devuelve un numero absoluto y revisa la velocidad
 
         anim.SetFloat("Horizontal", mov.x);
         anim.SetFloat("Speed", mov.sqrMagnitude);
