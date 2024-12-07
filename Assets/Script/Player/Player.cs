@@ -30,10 +30,7 @@ public class Player : MonoBehaviour
         { 
             Move();
         }
-        if (Input.GetKeyDown(KeyCode.K)) 
-        {
-            damageReceived();
-        }
+
     }
 
     private void Move()
@@ -68,5 +65,12 @@ public class Player : MonoBehaviour
     private void Morir()
     {
         Destroy(this.gameObject);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            damageReceived();
+        }
     }
 }
