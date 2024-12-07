@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private float bulletForce; //es para que sea privado pero se siga viendo en el inspector y editarlo, pero no podes editarlo en otro script. 
-    [SerializeField] private GameObject objectPrefab;
-    public Vector2 spawnPosition;
-    // Start is called before the first frame update
-
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            GameObject bulletClone = Instantiate(objectPrefab, transform.position, transform.rotation); // el quaternion. identity es para que sea en la misma posicion que el vector . y el vector que esta el spawn
-
-            Rigidbody2D bulletRigidBody = bulletClone.GetComponent<Rigidbody2D>(); //rigid body de la nueva bala
-
-            Vector2 direction = transform.right; //apunta a la direccion del eje x asi mira a donde esta viendo el personaje
-            bulletRigidBody.velocity = direction * bulletForce; // impulso de la bala multiplicado por el bulletforce
-
-            Destroy(bulletClone, 2f);
+            Debug.Log("Le pegó al enemigo");
+            Destroy(collision.gameObject); // Destruye al enemigo
+        }
+        else
+        {
+            Debug.Log("La bala colisionó con: " + collision.gameObject.name);
         }
 
-
+        Destroy(gameObject); // Destruye la bala después de cualquier colisión
     }
 }

@@ -25,6 +25,7 @@ public class bullet2 : MonoBehaviour
         {
             // También puedes verificar las colisiones con otros objetos si es necesario
             Debug.Log("La bala colisionó con otro objeto: " + collision.gameObject.name);
+            Destroy(gameObject);
         }
     }
 }
