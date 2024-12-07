@@ -65,10 +65,14 @@ public class Enemys : MonoBehaviour
     {
 
         Debug.Log("Enemigo atacando...");
-        currentState = EnemyStateMachine.Idle;
+        Invoke(nameof(continuar), 2f);
     }
     void Morir()
     {
         Debug.Log("Logica de enemigo murio ");
+    }
+    void continuar()
+    {
+        currentState = EnemyStateMachine.Idle;
     }
 }

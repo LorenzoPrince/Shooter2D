@@ -10,7 +10,10 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     public Animator anim;
     private SpriteRenderer spritePerso;
-    
+    private int lifePlayer = 3;
+    [SerializeField] Health health;
+    private bool canMove = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +26,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (canMove)  // verifico si esta true osea no esta muerto asi puedo moverme.
+        { 
+            Move();
+        }
+        if (Input.GetKeyDown(KeyCode.K)) 
+        {
+            damageReceived();
+        }
     }
 
     private void Move()
@@ -39,5 +49,24 @@ public class Player : MonoBehaviour
         {
             spritePerso.flipX = mov.x < 0; // Si se mueve a la izquierda, se voltea (flipX)
         }
+    }
+    private void damageReceived()
+    {
+        if (lifePlayer > 0) 
+        { 
+            lifePlayer --; //resta
+            health.heartRest(lifePlayer);
+            if (lifePlayer == 0)
+            {
+                canMove = false; // desactiva el movimiento
+                anim.SetTrigger("Muere");
+                Invoke(nameof(Morir), 2f); // invoco para que haga la animacion y desaparezca luego de 2 segundos que es el tiempo de animacion desaparece.
+                Debug.Log("muerto");
+            }
+        } 
+    }
+    private void Morir()
+    {
+        Destroy(this.gameObject);
     }
 }
