@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private List<GameObject> heartList;
+    [SerializeField] private List<GameObject> heartList; //hacemos lista
     [SerializeField] private Sprite HeartOff;
 
     public void heartRest(int index)

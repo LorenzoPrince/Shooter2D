@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7002039801772659602}
   - component: {fileID: 9044055501936309530}
   - component: {fileID: 4686144736963530431}
+  - component: {fileID: 7857049737147682011}
   m_Layer: 0
   m_Name: Playerr
   m_TagString: Player
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   anim: {fileID: 4686144736963530431}
+  health: {fileID: 7857049737147682011}
 --- !u!50 &7002039801772659602
 Rigidbody2D:
   serializedVersion: 4
@@ -255,8 +257,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.028255666, y: 0.07805894}
-  m_Size: {x: 0.65246326, y: 0.7868316}
+  m_Offset: {x: -0.039171606, y: 0.05619052}
+  m_Size: {x: 0.9453259, y: 0.9453259}
   m_Direction: 0
 --- !u!95 &4686144736963530431
 Animator:
@@ -279,6 +281,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7857049737147682011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181687726880135267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc38b3fb0cc69c44bac20819dee4804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  HeartOff: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
 --- !u!1 &7057409587944315688
 GameObject:
   m_ObjectHideFlags: 0

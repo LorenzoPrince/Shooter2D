@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3729185211401418383}
   - component: {fileID: 5860463369636348422}
   - component: {fileID: 7823513234199303015}
+  - component: {fileID: 8340351032598746850}
+  - component: {fileID: 878608504303318759}
   m_Layer: 0
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +99,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1769db91778ec514c940c41857f426a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador: {fileID: 1945273870669647014, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
-  rangoAtaque: 2
-  rangoDeteccion: 2
+  jugador: {fileID: 0}
+  rangoAtaque: 1
+  rangoDeteccion: 5
   velocidad: 3
+--- !u!70 &8340351032598746850
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556827775035869924}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.044718742, y: 0.028981328}
+  m_Size: {x: 0.7834568, y: 1.057307}
+  m_Direction: 0
+--- !u!114 &878608504303318759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556827775035869924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d28c960cb8894048b4f5500bb2543e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referencia: {fileID: 0}

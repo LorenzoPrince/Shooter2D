@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private bool canMove = true;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
         mov.x = Input.GetAxisRaw("Horizontal") * speed;
         mov.y = Input.GetAxisRaw("Vertical") * speed;
         rb.velocity = new Vector2(mov.x, mov.y); // el rb.velocity se encarga de mantener el movimiento independiente a los frame
-        anim.SetFloat("Caminar", Mathf.Abs(rb.velocity.magnitude)); // nos devuelve un numero absoluto y revisa la velocidad
+
 
         anim.SetFloat("Horizontal", mov.x);
         anim.SetFloat("Speed", mov.sqrMagnitude);
@@ -56,6 +57,7 @@ public class Player : MonoBehaviour
             if (lifePlayer == 0)
             {
                 canMove = false; // desactiva el movimiento
+                rb.constraints = RigidbodyConstraints2D.FreezeAll; //frezeo el movimiento en todos los ejes para que no empujen al personaje
                 anim.SetTrigger("Muere");
                 Invoke(nameof(Morir), 2f); // invoco para que haga la animacion y desaparezca luego de 2 segundos que es el tiempo de animacion desaparece.
                 Debug.Log("muerto");
@@ -64,11 +66,14 @@ public class Player : MonoBehaviour
     }
     private void Morir()
     {
+
+        Time.timeScale = 0;
         Destroy(this.gameObject);
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Shot"))
         {
             damageReceived();
         }

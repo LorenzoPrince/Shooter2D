@@ -7,6 +7,9 @@ TagManager:
   - Floor
   - Point
   - Enemy
+  - Point1
+  - Point2
+  - Point3
   layers:
   - Default
   - TransparentFX
