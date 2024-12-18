@@ -10,6 +10,7 @@ TagManager:
   - Point1
   - Point2
   - Point3
+  - Shot
   layers:
   - Default
   - TransparentFX
