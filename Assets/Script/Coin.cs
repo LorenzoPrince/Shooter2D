@@ -10,8 +10,11 @@ public class Coin : MonoBehaviour
     public int totalItems;
     public TMPro.TextMeshProUGUI scoreText;
     private int pointsToAdd;
+
+    public AudioSource audioSource; //lamo para el audio
     void Start()
     {
+     //   audioSource = GetComponent<AudioSource>(); // busco el audio
         UpdateScore();
     }
 
@@ -22,13 +25,7 @@ public class Coin : MonoBehaviour
         // Update score in screen
         scoreText.text = collectedItems + " ";
     }
-    private void collectionItem(Collider2D contraLoQueChoque)
-    {
-        Destroy(contraLoQueChoque.gameObject);
-        collectedItems++;
-        UpdateScore();
 
-    }
 
     private void CollectItem(string tag)
     {
@@ -58,6 +55,17 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Point1") || other.CompareTag("Point2") || other.CompareTag("Point3"))
         {
             CollectItem(other.tag);  //lamamo funcion con el objeto y su etiqueta
+            if (audioSource != null)
+            {
+                // Reproduce el sonido solo si el AudioSource está correctamente asignado
+                audioSource.Play();
+                Debug.Log("Reproduciendo sonido");
+            }
+            else
+            {
+                Debug.LogError("AudioSource no está asignado correctamente.");
+            }
+
             Destroy(other.gameObject);  
         }
 

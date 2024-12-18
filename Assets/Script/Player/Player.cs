@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private int lifePlayer = 3;
     [SerializeField] Health health;
     private bool canMove = true;
+    public AudioSource audioSource; //llamo para el audio
 
 
 
@@ -58,6 +59,7 @@ public class Player : MonoBehaviour
             {
                 canMove = false; // desactiva el movimiento
                 rb.constraints = RigidbodyConstraints2D.FreezeAll; //frezeo el movimiento en todos los ejes para que no empujen al personaje
+                audioSource.Play();
                 anim.SetTrigger("Muere");
                 Invoke(nameof(Morir), 2f); // invoco para que haga la animacion y desaparezca luego de 2 segundos que es el tiempo de animacion desaparece.
                 Debug.Log("muerto");
