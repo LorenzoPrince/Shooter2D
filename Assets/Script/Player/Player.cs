@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>(); // ya que no esta en objeto padre si no en el hijo.
         spritePerso = GetComponentInChildren<SpriteRenderer>();
+
+
     }
 
     // Update is called once per frame
@@ -69,8 +72,9 @@ public class Player : MonoBehaviour
     private void Morir()
     {
 
-        Time.timeScale = 0;
-        Destroy(this.gameObject);
+        string sceneName = SceneManager.GetActiveScene().name; //agarro escena
+        SceneManager.LoadScene(sceneName);
+        //Destroy(this.gameObject);
 
     }
     private void OnCollisionEnter2D(Collision2D collision)

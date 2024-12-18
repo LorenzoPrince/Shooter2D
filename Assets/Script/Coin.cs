@@ -15,9 +15,21 @@ public class Coin : MonoBehaviour
     void Start()
     {
         //   audioSource = GetComponent<AudioSource>(); // busco el audio
-        collectedItems = PlayerPrefs.GetInt("CollectedCoins", 0); //guarda datos persistentes osea guarda hasta el final las money
+        if (SceneManager.GetActiveScene().name == "Scene1") //esto para que ccuando arranque de nuevo no tenga los puntos viejos
+        {
+            collectedItems = 0;
+            PlayerPrefs.SetInt("CollectedCoins", collectedItems);  // Reiniciar el valor en PlayerPrefs
+            PlayerPrefs.Save();  // Guardar los cambios
+        }
+        else
+        {
+
+            collectedItems = PlayerPrefs.GetInt("CollectedCoins", 0); //guarda datos persistentes osea guarda hasta el final las money
+        }
         UpdateScore();
     }
+
+    
 
     // Update is called once per frame
 
@@ -44,6 +56,8 @@ public class Coin : MonoBehaviour
                 break;
         }
         collectedItems += pointsToAdd;
+        PlayerPrefs.SetInt("CollectedCoins", collectedItems);  // Guardar el número de monedas en PlayerPrefs
+        PlayerPrefs.Save();  // Guardar los cambios
         UpdateScore();
 
 
