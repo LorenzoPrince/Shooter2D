@@ -18,7 +18,7 @@ public class nexLevel : MonoBehaviour
             if (totalsEnemy == 0)
             {
                 Debug.Log("cambio escena");
-                //SceneManager.LoadScene("NombreDeLaEscena");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Scene2"); // uso esta forma pq el scene solo no va 
             }
         }
     }

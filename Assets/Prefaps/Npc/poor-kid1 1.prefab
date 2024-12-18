@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3505587308938809198}
   - component: {fileID: 4926269053665619169}
+  - component: {fileID: 5107245447435420828}
   m_Layer: 0
   m_Name: poor-kid1 1
   m_TagString: Untagged
@@ -29,7 +30,8 @@ Transform:
   m_LocalPosition: {x: -0.06435859, y: -3.2295249, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2025206495458409336}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4926269053665619169
@@ -72,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 453032dd4b1ab4340866e47662623b47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -84,3 +86,130 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &5107245447435420828
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926005999235529964}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00060992443, y: 0}
+  m_Size: {x: 0.100226186, y: 0.16}
+  m_Direction: 0
+--- !u!1001 &2955473583975263870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3505587308938809198}
+    m_Modifications:
+    - target: {fileID: 1439254228405487506, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_Name
+      value: Texts
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.data[0]
+      value: 'HOLA AMIGO...
+
+        NECESITO TU AYUDA'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.data[1]
+      value: 'EL GRAN GUERRERO AITULUM
+
+        ESTA EN PELIGRO!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.data[2]
+      value: "EL SE ENCUENTRA \nEN EL BOSQUE"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.data[3]
+      value: 'RODEADO POR ESQUELETOS....
+
+        PODRAS RESCATARLO?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402125959657976699, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+      propertyPath: arrayText.Array.data[4]
+      value: "MUCHAS GRACIAS \nTEN CUIDADO CON\nESOS ESQUELETOS.."
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+--- !u!4 &2025206495458409336 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3826099267009369350, guid: 59b849928d6067147a0c67750bd8686f, type: 3}
+  m_PrefabInstance: {fileID: 2955473583975263870}
+  m_PrefabAsset: {fileID: 0}
