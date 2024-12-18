@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class nexLevel : MonoBehaviour
 {
@@ -17,8 +18,19 @@ public class nexLevel : MonoBehaviour
             Debug.Log("adentro total enemigos vivos: " + totalsEnemy);
             if (totalsEnemy == 0)
             {
-                Debug.Log("cambio escena");
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Scene2"); // uso esta forma pq el scene solo no va 
+                string ActualScene = SceneManager.GetActiveScene().name; //Agarro el nombre de la escena
+                Debug.Log("elijo escena");
+                if (ActualScene == "Scene1")
+                {
+                    Debug.Log("cambio escena");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Scene2"); // uso esta forma pq el scene solo no va 
+                }
+                if (ActualScene == "Scene2")
+                {
+                    Debug.Log("cambio escena");
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Scene3"); // uso esta forma pq el scene solo no va 
+                }
+
             }
         }
     }
