@@ -57,7 +57,7 @@ public class Coin : MonoBehaviour
             CollectItem(other.tag);  //lamamo funcion con el objeto y su etiqueta
             if (audioSource != null)
             {
-                // Reproduce el sonido solo si el AudioSource está correctamente asignado
+                // Reproduce el sonido solo si el AudioSource anda prueba pq no me andaba. arreglado.
                 audioSource.Play();
                 Debug.Log("Reproduciendo sonido");
             }
