@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 9044055501936309530}
   - component: {fileID: 4686144736963530431}
   - component: {fileID: 7857049737147682011}
-  - component: {fileID: 9108552545976172961}
+  - component: {fileID: 8053364841245113230}
   m_Layer: 0
   m_Name: Playerr
   m_TagString: Player
@@ -430,7 +430,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   HeartOff: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
---- !u!114 &9108552545976172961
+--- !u!114 &8053364841245113230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

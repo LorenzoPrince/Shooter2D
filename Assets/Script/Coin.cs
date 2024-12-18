@@ -14,7 +14,8 @@ public class Coin : MonoBehaviour
     public AudioSource audioSource; //lamo para el audio
     void Start()
     {
-     //   audioSource = GetComponent<AudioSource>(); // busco el audio
+        //   audioSource = GetComponent<AudioSource>(); // busco el audio
+        collectedItems = PlayerPrefs.GetInt("CollectedCoins", 0); //guarda datos persistentes osea guarda hasta el final las money
         UpdateScore();
     }
 

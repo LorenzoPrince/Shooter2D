@@ -4952,13 +4952,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1372390408540171932, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1945273870669647014, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 1945273870669647014, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.12
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 1945273870669647014, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5008,10 +5012,18 @@ PrefabInstance:
       propertyPath: heartList.Array.data[2]
       value: 
       objectReference: {fileID: 246100093}
+    - target: {fileID: 8053364841245113230, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 762662121}
     - target: {fileID: 9108552545976172961, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 762662121}
+    - target: {fileID: 9218530051899856291, guid: 300373d0ee693b048931ac9770a092fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5108,6 +5120,18 @@ PrefabInstance:
     - target: {fileID: 7101703710868610325, guid: 6dc25a9f64eb2ef41b03d7d62b16c439, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7897019370021013201, guid: 6dc25a9f64eb2ef41b03d7d62b16c439, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769714698329676609, guid: 6dc25a9f64eb2ef41b03d7d62b16c439, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769714698329676609, guid: 6dc25a9f64eb2ef41b03d7d62b16c439, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 273
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
